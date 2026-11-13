@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import BackLink from '@/components/BackLink'
 import CopyButton from '@/components/CopyButton'
 import Footer from '@/components/Footer'
 import Reveal from '@/components/Reveal'
@@ -21,9 +22,7 @@ export default function FriendsPage() {
   return (
     <main className="mx-auto w-full max-w-3xl px-6 pt-12">
       <Reveal className="mb-12">
-        <Link href="/clouds" className="text-sm font-light text-ink-sub transition-colors hover:text-ink">
-          ← 单行道
-        </Link>
+        <BackLink href="/clouds" />
         <div className="mt-8 text-center">
           <h1 className="font-serif text-2xl font-normal tracking-wide text-ink">岔路迷途</h1>
           <p className="mt-3 text-sm font-light leading-relaxed text-ink-sub">

@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import BackLink from '@/components/BackLink'
 import { notFound } from 'next/navigation'
 import ArticleCard from '@/components/ArticleCard'
 import Footer from '@/components/Footer'
@@ -41,9 +42,7 @@ export default async function TagPage({ params }: { params: Promise<{ tag: strin
   return (
     <main className="mx-auto w-full max-w-4xl px-6 pt-12">
       <Reveal className="mb-10">
-        <Link href="/clouds" className="text-sm font-light text-ink-sub transition-colors hover:text-ink">
-          ← 单行道
-        </Link>
+        <BackLink href="/clouds" />
         <div className="mt-8 text-center">
           <h1 className="font-serif text-2xl font-normal tracking-wide text-ink">{tag}</h1>
           <p className="mt-2 font-mono text-xs tracking-wide text-ink-sub">{articles.length} 篇</p>

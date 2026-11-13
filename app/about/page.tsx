@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import BackLink from '@/components/BackLink'
 import Image from 'next/image'
 import Footer from '@/components/Footer'
 import Reveal from '@/components/Reveal'
@@ -10,9 +11,7 @@ export default function AboutPage() {
     <main className="mx-auto w-full max-w-3xl px-6 pt-10">
       {/* 顶部返回 + 板块标题 */}
       <Reveal className="mb-10">
-        <Link href="/clouds" className="text-sm font-light text-ink-sub transition-colors hover:text-ink">
-          ← 单行道
-        </Link>
+        <BackLink href="/clouds" />
         <div className="mt-8 text-center">
           <h1 className="text-3xl font-light tracking-wide text-ink">关于此间</h1>
           <p className="mt-3 text-sm font-light text-ink-sub">单向 · 追云</p>
