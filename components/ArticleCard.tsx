@@ -24,7 +24,7 @@ export default function ArticleCard({ article }: { article: Article }) {
         )}
       </span>
       <span className="min-w-0 flex-1">
-        <span className="font-mono text-xs tracking-wide text-ink-faint">
+        <span className="font-mono text-xs tracking-wide text-ink-sub">
           {article.date.replace(/-/g, '.')}
           {article.minutes >= 3 && <span className="ml-2">· {article.minutes} 分钟</span>}
         </span>

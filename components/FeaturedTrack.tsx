@@ -27,7 +27,7 @@ export default function FeaturedTrack({ track }: { track?: Track }) {
           {track.cover ? (
             <img src={track.cover} alt="" className="h-full w-full object-cover" />
           ) : (
-            <span className="flex h-full w-full items-center justify-center text-base text-ink-faint">♪</span>
+            <span className="flex h-full w-full items-center justify-center text-base text-ink-sub">♪</span>
           )}
         </span>
 
@@ -48,7 +48,7 @@ export default function FeaturedTrack({ track }: { track?: Track }) {
         </button>
       </div>
 
-      <span className="mt-4 inline-block text-xs font-light text-ink-mute transition-colors group-hover:text-ink">
+      <span className="mt-4 inline-block text-xs font-light text-ink-sub transition-colors group-hover:text-ink">
         进入留声机 →
       </span>
     </Link>

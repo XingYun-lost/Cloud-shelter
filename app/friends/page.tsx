@@ -36,7 +36,7 @@ export default function FriendsPage() {
       {owner && (
         <Reveal className="mb-14">
           <div className="glass p-6">
-            <p className="font-mono text-[10px] uppercase tracking-[0.25em] text-ink-faint">本站</p>
+            <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-ink-sub">本站</p>
             <div className="mt-4 flex items-start gap-4">
               {owner.avatar && (
                 <img
@@ -50,7 +50,7 @@ export default function FriendsPage() {
               <div className="min-w-0 flex-1">
                 <p className="font-serif text-lg font-normal text-ink">{owner.name}</p>
                 <p className="mt-1 text-sm font-light text-ink-sub">{owner.desc}</p>
-                <p className="mt-2 break-all font-mono text-[11px] text-ink-faint">{owner.url}</p>
+                <p className="mt-2 break-all font-mono text-xs text-ink-sub">{owner.url}</p>
               </div>
             </div>
             <div className="mt-5 flex flex-wrap items-center gap-3">
@@ -63,11 +63,11 @@ export default function FriendsPage() {
 
       {/* 他人的迷途 */}
       <section className="mb-14">
-        <h2 className="font-mono text-[10px] uppercase tracking-[0.25em] text-ink-faint">他人的迷途</h2>
+        <h2 className="font-mono text-[11px] uppercase tracking-[0.2em] text-ink-sub">他人的迷途</h2>
 
         {friends.length === 0 ? (
           <Reveal className="mt-5">
-            <p className="glass px-6 py-10 text-center text-sm font-light text-ink-faint">
+            <p className="glass px-6 py-10 text-center text-sm font-light text-ink-sub">
               还没有他人的迷途。
             </p>
           </Reveal>
@@ -81,7 +81,7 @@ export default function FriendsPage() {
                   rel="noopener noreferrer"
                   className="glass glass-hover flex min-w-0 items-start gap-3 p-4"
                 >
-                  <span className="flex h-11 w-11 shrink-0 items-center justify-center overflow-hidden rounded-full bg-sand/40 text-sm text-ink-mute">
+                  <span className="flex h-11 w-11 shrink-0 items-center justify-center overflow-hidden rounded-full bg-sand/40 text-sm text-ink-sub">
                     {f.avatar ? (
                       <img
                         src={f.avatar}
@@ -96,7 +96,7 @@ export default function FriendsPage() {
                   </span>
                   <span className="min-w-0 flex-1">
                     <span className="block truncate font-serif text-base font-normal text-ink">{f.name}</span>
-                    <span className="mt-1 block text-xs font-light leading-relaxed text-ink-sub">
+                    <span className="mt-1.5 block text-sm font-light leading-relaxed text-ink-sub">
                       {f.desc}
                     </span>
                   </span>

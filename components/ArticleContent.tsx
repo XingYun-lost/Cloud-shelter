@@ -36,7 +36,7 @@ export default function ArticleContent({
         <div className="mt-8 text-center">
           <h1 className="text-3xl font-light tracking-wide text-ink">{article.title}</h1>
           <p className="mt-3 text-sm font-light text-ink-sub">{article.desc}</p>
-          {meta && <p className="mt-2 font-mono text-xs font-light tracking-wide text-ink-faint">{meta}</p>}
+          {meta && <p className="mt-2 font-mono text-xs font-light tracking-wide text-ink-sub">{meta}</p>}
         </div>
       </Reveal>
 
@@ -55,7 +55,7 @@ export default function ArticleContent({
                   href={`/article/${prev.slug}`}
                   className="block text-ink-sub transition-colors hover:text-ink"
                 >
-                  <span className="text-xs font-light text-ink-faint">← 上一篇</span>
+                  <span className="text-xs font-light text-ink-sub">← 上一篇</span>
                   <span className="mt-1 block font-light">{prev.title}</span>
                 </Link>
               )}
@@ -66,7 +66,7 @@ export default function ArticleContent({
                   href={`/article/${next.slug}`}
                   className="block text-ink-sub transition-colors hover:text-ink"
                 >
-                  <span className="text-xs font-light text-ink-faint">下一篇 →</span>
+                  <span className="text-xs font-light text-ink-sub">下一篇 →</span>
                   <span className="mt-1 block font-light">{next.title}</span>
                 </Link>
               )}

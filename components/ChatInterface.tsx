@@ -128,7 +128,7 @@ export default function ChatInterface({ initialInput = '' }: { initialInput?: st
       <div ref={scrollRef} className="flex-1 space-y-4 overflow-y-auto p-4 sm:p-6">
         {/* 空状态 */}
         {messages.length === 0 && !isTyping && (
-          <div className="flex h-full flex-col items-center justify-center gap-3 text-ink-faint">
+          <div className="flex h-full flex-col items-center justify-center gap-3 text-ink-sub">
             <span className="text-4xl" aria-hidden="true">
               ☁️
             </span>
@@ -160,7 +160,7 @@ export default function ChatInterface({ initialInput = '' }: { initialInput?: st
             value={input}
             onChange={(e) => setInput(e.target.value)}
             placeholder="把心事交给风…"
-            className="flex-1 bg-transparent text-ink placeholder:text-ink-faint focus:outline-none"
+            className="flex-1 bg-transparent text-ink placeholder:text-ink-sub focus:outline-none"
             disabled={isLoading}
           />
           <button

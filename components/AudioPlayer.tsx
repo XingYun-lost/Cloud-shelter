@@ -55,7 +55,7 @@ export default function AudioPlayer() {
     return (
       <div className="glass px-6 py-9 text-center">
         <p className="text-sm font-light text-ink-sub">歌单还是空的。</p>
-        <p className="mt-2 text-xs font-light leading-relaxed text-ink-faint">
+        <p className="mt-2 text-xs font-light leading-relaxed text-ink-sub">
           把 mp3 / flac / wav 等音频文件放进 <span className="font-mono">public/audio/</span> 目录，
           刷新页面就会出现在这里。
         </p>
@@ -74,7 +74,7 @@ export default function AudioPlayer() {
     <div className="glass flex flex-col overflow-hidden">
       {/* ===== 菜单栏 ===== */}
       <header className="flex items-center justify-between gap-4 border-b border-black/5 px-5 py-2.5">
-        <p className="flex items-center gap-1.5 text-[11px] font-light text-ink-mute">
+        <p className="flex items-center gap-1.5 text-[11px] font-light text-ink-sub">
           <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" aria-hidden="true">
             <path d="M9 18V6.5l10-2V16" />
             <circle cx="6" cy="18" r="2.5" />
@@ -152,7 +152,7 @@ export default function AudioPlayer() {
                     active ? 'bg-white/70' : 'hover:bg-white/45'
                   }`}
                 >
-                  <span className="flex h-4 w-4 shrink-0 items-center justify-center text-[11px] font-light tabular-nums text-ink-faint">
+                  <span className="flex h-4 w-4 shrink-0 items-center justify-center text-[11px] font-light tabular-nums text-ink-sub">
                     {active ? <Eq playing={playing} /> : i + 1}
                   </span>
                   <span
@@ -162,11 +162,11 @@ export default function AudioPlayer() {
                   >
                     {t.title}
                     {t.artist && (
-                      <span className="ml-2 text-[11px] text-ink-faint">{t.artist}</span>
+                      <span className="ml-2 text-[11px] text-ink-sub">{t.artist}</span>
                     )}
                   </span>
                   {/* 歌曲时间 */}
-                  <span className="shrink-0 text-[11px] font-light tabular-nums text-ink-faint">
+                  <span className="shrink-0 text-[11px] font-light tabular-nums text-ink-sub">
                     {t.duration !== undefined ? fmt(t.duration) : '--:--'}
                   </span>
                 </button>
@@ -209,7 +209,7 @@ export default function AudioPlayer() {
             {track.cover ? (
               <img src={track.cover} alt="" className="h-full w-full object-cover" />
             ) : (
-              <span className="flex h-full w-full items-center justify-center text-[10px] text-ink-faint">
+              <span className="flex h-full w-full items-center justify-center text-[10px] text-ink-sub">
                 ♪
               </span>
             )}
@@ -218,7 +218,7 @@ export default function AudioPlayer() {
           {/* 歌名 + 歌手 + 时间 */}
           <div className="min-w-0 flex-1">
             <p className="truncate text-sm font-light text-ink">{track.title}</p>
-            <p className="mt-0.5 truncate text-[11px] font-light text-ink-faint">
+            <p className="mt-0.5 truncate text-[11px] font-light text-ink-sub">
               {track.artist ? `${track.artist} · ` : ''}
               <span className="tabular-nums">
                 {fmt(shown)} /{' '}
@@ -290,7 +290,7 @@ export default function AudioPlayer() {
         </div>
 
         {failed && (
-          <p className="mt-3 text-center text-xs font-light leading-relaxed text-ink-faint">
+          <p className="mt-3 text-center text-xs font-light leading-relaxed text-ink-sub">
             音频加载失败，可能是网络或音频源暂时不可用，稍后再试。
           </p>
         )}

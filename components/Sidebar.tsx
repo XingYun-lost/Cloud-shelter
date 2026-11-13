@@ -121,7 +121,7 @@ export default function Sidebar({
             type="button"
             onClick={() => setOpen(false)}
             aria-label="关闭导航"
-            className="absolute right-4 top-5 z-20 rounded-full px-2 py-1 text-sm leading-none text-ink-faint transition-colors hover:text-ink lg:hidden"
+            className="absolute right-4 top-5 z-20 rounded-full px-2 py-1 text-sm leading-none text-ink-sub transition-colors hover:text-ink lg:hidden"
           >
             ✕
           </button>
@@ -136,7 +136,7 @@ export default function Sidebar({
           />
           <span>
             <span className="block font-serif text-lg font-normal tracking-wide text-ink">云端庇护所</span>
-            <span className="mt-1 block text-xs font-light leading-relaxed text-ink-mute">
+            <span className="mt-1 block text-xs font-light leading-relaxed text-ink-sub">
               单行道上，云在飘
             </span>
           </span>
@@ -149,9 +149,9 @@ export default function Sidebar({
             value={q}
             onChange={(e) => setQ(e.target.value)}
             placeholder="搜索文章"
-            className="w-full rounded-xl border border-white/70 bg-white/70 px-3.5 py-2.5 pr-4 text-[15px] text-ink backdrop-blur-sm sm:pr-16 placeholder:text-ink-faint focus:outline-none focus:ring-1 focus:ring-accent"
+            className="w-full rounded-xl border border-white/70 bg-white/70 px-3.5 py-2.5 pr-4 text-[15px] text-ink backdrop-blur-sm sm:pr-16 placeholder:text-ink-sub focus:outline-none focus:ring-1 focus:ring-accent"
           />
-          <kbd className="pointer-events-none absolute right-2 top-1/2 hidden -translate-y-1/2 rounded border border-sand/60 px-1.5 py-0.5 font-mono text-[10px] text-ink-faint sm:block">
+          <kbd className="pointer-events-none absolute right-2 top-1/2 hidden -translate-y-1/2 rounded border border-sand/60 px-1.5 py-0.5 font-mono text-[10px] text-ink-sub sm:block">
             Ctrl K
           </kbd>
 
@@ -172,7 +172,7 @@ export default function Sidebar({
                   ))}
                 </ul>
               ) : (
-                <p className="px-3 py-2 text-xs font-light text-ink-faint">没有匹配的文章</p>
+                <p className="px-3 py-2 text-xs font-normal text-ink">没有匹配的文章</p>
               )}
             </div>
           )}
@@ -189,7 +189,7 @@ export default function Sidebar({
                   className={`block rounded-xl px-3.5 py-2.5 text-[15px] backdrop-blur-sm transition-colors ${
                     isActive(item.href)
                       ? 'bg-white/85 font-normal text-ink'
-                      : 'bg-white/40 font-light text-ink-sub hover:bg-white/70 hover:text-ink'
+                      : 'bg-white/55 font-normal text-ink hover:bg-white/70 hover:text-ink'
                   }`}
                 >
                   {item.label}
@@ -202,13 +202,13 @@ export default function Sidebar({
               <div key={item.href}>
                 <div
                   className={`flex items-center rounded-xl backdrop-blur-sm transition-colors ${
-                    isActive(item.href) ? 'bg-white/85' : 'bg-white/40 hover:bg-white/70'
+                    isActive(item.href) ? 'bg-white/85' : 'bg-white/55 hover:bg-white/80'
                   }`}
                 >
                   <Link
                     href={item.href}
                     className={`flex-1 rounded-xl px-3.5 py-2.5 text-[15px] transition-colors ${
-                      roadActive ? 'font-normal text-ink' : 'font-light text-ink-sub'
+                      roadActive ? 'font-normal text-ink' : 'font-normal text-ink'
                     }`}
                   >
                     {item.label}
@@ -218,7 +218,7 @@ export default function Sidebar({
                     onClick={() => setRoadOpen((v) => !v)}
                     aria-label={roadOpen ? '收起分类' : '展开分类'}
                     aria-expanded={roadOpen}
-                    className="px-3 py-2.5 text-xs text-ink-faint transition-colors hover:text-ink"
+                    className="px-3 py-2.5 text-xs text-ink-sub transition-colors hover:text-ink"
                   >
                     <span className={`inline-block transition-transform duration-200 ${roadOpen ? 'rotate-90' : ''}`}>
                       ▸
@@ -233,7 +233,7 @@ export default function Sidebar({
                       className={`block rounded-lg px-2.5 py-1.5 text-[13px] transition-colors ${
                         pathname === '/clouds'
                           ? 'bg-white/70 font-normal text-ink'
-                          : 'bg-white/30 font-light text-ink-sub hover:bg-white/60 hover:text-ink'
+                          : 'bg-white/45 font-normal text-ink hover:bg-white/75 hover:text-ink'
                       }`}
                     >
                       全部
@@ -248,11 +248,11 @@ export default function Sidebar({
                           className={`flex items-center justify-between rounded-lg px-2.5 py-1.5 text-[13px] transition-colors ${
                             tagActive
                               ? 'bg-white/70 font-normal text-ink'
-                              : 'bg-white/30 font-light text-ink-sub hover:bg-white/60 hover:text-ink'
+                              : 'bg-white/45 font-normal text-ink hover:bg-white/75 hover:text-ink'
                           }`}
                         >
                           <span>{t.name}</span>
-                          <span className="font-mono text-[11px] text-ink-faint">{t.count}</span>
+                          <span className="font-mono text-[11px] text-ink-sub">{t.count}</span>
                         </Link>
                       )
                     })}

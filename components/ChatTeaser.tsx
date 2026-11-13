@@ -22,7 +22,7 @@ export default function ChatTeaser() {
           onChange={(e) => setText(e.target.value)}
           placeholder="说点什么…"
           aria-label="对树洞说点什么"
-          className="min-w-0 flex-1 bg-transparent text-sm text-ink placeholder:text-ink-faint focus:outline-none"
+          className="min-w-0 flex-1 bg-transparent text-sm text-ink placeholder:text-ink-sub focus:outline-none"
         />
         <button
           type="submit"
@@ -31,7 +31,7 @@ export default function ChatTeaser() {
           发送
         </button>
       </div>
-      <p className="mt-4 text-xs font-light text-ink-mute">说出口的，云都会听见</p>
+      <p className="mt-4 text-xs font-light text-ink-sub">说出口的，云都会听见</p>
     </form>
   )
 }

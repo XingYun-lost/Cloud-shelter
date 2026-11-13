@@ -46,7 +46,7 @@ export default async function TagPage({ params }: { params: Promise<{ tag: strin
         </Link>
         <div className="mt-8 text-center">
           <h1 className="font-serif text-2xl font-normal tracking-wide text-ink">{tag}</h1>
-          <p className="mt-2 font-mono text-xs tracking-wide text-ink-faint">{articles.length} 篇</p>
+          <p className="mt-2 font-mono text-xs tracking-wide text-ink-sub">{articles.length} 篇</p>
         </div>
       </Reveal>
 
@@ -59,7 +59,7 @@ export default async function TagPage({ params }: { params: Promise<{ tag: strin
           ))}
         </ul>
       ) : (
-        <p className="py-12 text-center font-serif text-sm font-light text-ink-mute">路上还没有脚印。</p>
+        <p className="py-12 text-center font-serif text-sm font-light text-ink-sub">路上还没有脚印。</p>
       )}
 
       <Footer />

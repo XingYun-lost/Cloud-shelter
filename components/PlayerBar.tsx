@@ -21,7 +21,7 @@ export default function PlayerBar() {
             {track.cover ? (
               <img src={track.cover} alt="" className="h-full w-full object-cover" />
             ) : (
-              <span className="flex h-full w-full items-center justify-center text-[10px] text-ink-faint">
+              <span className="flex h-full w-full items-center justify-center text-[10px] text-ink-sub">
                 ♪
               </span>
             )}
@@ -29,7 +29,7 @@ export default function PlayerBar() {
 
           <span className="min-w-0 flex-1">
             <span className="block truncate text-xs text-ink">{track.title}</span>
-            <span className="block truncate text-[11px] font-light text-ink-faint">
+            <span className="block truncate text-[11px] font-light text-ink-sub">
               {track.artist || '未知艺术家'}
             </span>
           </span>

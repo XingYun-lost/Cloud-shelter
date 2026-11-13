@@ -58,10 +58,10 @@ export default function CloudsPage() {
           ))}
         </ol>
         {articles.length === 0 && (
-          <p className="text-center text-sm font-light text-ink-faint">路上还没有脚印。</p>
+          <p className="text-center text-sm font-light text-ink-sub">路上还没有脚印。</p>
         )}
         <Reveal className="pt-2">
-          <p className="text-center font-serif text-sm font-light text-ink-mute">路还长，慢慢走。</p>
+          <p className="text-center font-serif text-sm font-light text-ink-sub">路还长，慢慢走。</p>
         </Reveal>
       </section>
 

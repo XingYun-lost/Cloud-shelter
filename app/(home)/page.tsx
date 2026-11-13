@@ -31,7 +31,7 @@ export default async function HomePage() {
         <div className="grid w-full min-w-0 grid-cols-1 gap-5 md:grid-cols-2">
           <Reveal delay={0.05} className="min-w-0">
             <div className="glass flex h-full min-w-0 flex-col overflow-hidden p-6">
-              <p className="font-mono text-[10px] uppercase tracking-[0.25em] text-ink-faint">留声机</p>
+              <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-ink-sub">留声机</p>
               <p className="mt-2 font-serif text-lg font-normal tracking-wide text-ink">
                 声音是另一种云
               </p>
@@ -43,7 +43,7 @@ export default async function HomePage() {
 
           <Reveal delay={0.12} className="min-w-0">
             <div className="glass flex h-full min-w-0 flex-col overflow-hidden p-6">
-              <p className="font-mono text-[10px] uppercase tracking-[0.25em] text-ink-faint">树洞</p>
+              <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-ink-sub">树洞</p>
               <p className="mt-2 font-serif text-lg font-normal tracking-wide text-ink">
                 说点什么，云在听
               </p>
