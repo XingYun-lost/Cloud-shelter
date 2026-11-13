@@ -7,7 +7,7 @@ import { getFriends } from '@/lib/friends'
 
 export const metadata: Metadata = {
   title: '岔路迷途 · 云端庇护所',
-  description: '走在这条路上的人，各有各的方向。',
+  description: '不论行迷何方，亦是向前。',
 }
 
 /** 岔路迷途：友链板 */
@@ -27,7 +27,7 @@ export default function FriendsPage() {
         <div className="mt-8 text-center">
           <h1 className="font-serif text-2xl font-normal tracking-wide text-ink">岔路迷途</h1>
           <p className="mt-3 text-sm font-light leading-relaxed text-ink-sub">
-            走在这条路上的人，各有各的方向。
+            不论行迷何方，亦是向前。
           </p>
         </div>
       </Reveal>
