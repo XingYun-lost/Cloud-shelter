@@ -36,7 +36,7 @@ export default function FriendsPage() {
       {owner && (
         <Reveal className="mb-14">
           <div className="glass p-6">
-            <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-ink-sub">本站</p>
+            <p className="font-mono text-sm font-medium tracking-[0.12em] text-ink">本站</p>
             <div className="mt-4 flex items-start gap-4">
               {owner.avatar && (
                 <img
@@ -63,7 +63,7 @@ export default function FriendsPage() {
 
       {/* 他人的迷途 */}
       <section className="mb-14">
-        <h2 className="font-mono text-[11px] uppercase tracking-[0.2em] text-ink-sub">他人的迷途</h2>
+        <h2 className="font-mono text-sm font-medium tracking-[0.12em] text-ink">他人的迷途</h2>
 
         {friends.length === 0 ? (
           <Reveal className="mt-5">
