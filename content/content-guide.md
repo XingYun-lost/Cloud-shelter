@@ -249,7 +249,50 @@ curl.exe -sI https://cdn.cloud-shelter.top/audio/xin-ge.mp3
 
 ---
 
-## 三、命令速查
+## 三、加友链
+
+友链板块在 `/friends`，叫**岔路迷途**。所有数据都在 `content/friends.json`，改文件即可，不用碰代码。
+
+```json
+{
+  "owner": {
+    "name": "云端庇护所",
+    "url": "https://www.cloud-shelter.top",
+    "avatar": "/images/friend-link.jpg",
+    "desc": "单行道上，云在飘，你在走。"
+  },
+  "friends": [
+    {
+      "name": "某某的小站",
+      "url": "https://example.com",
+      "avatar": "https://example.com/avatar.png",
+      "desc": "一句话介绍"
+    }
+  ]
+}
+```
+
+| 字段 | 必填 | 说明 |
+| --- | --- | --- |
+| `name` | 是 | 站名 |
+| `url` | 是 | 站点地址，会新窗口打开 |
+| `avatar` | 否 | 头像，本地路径或外链；不填就用站名首字 |
+| `desc` | 否 | 一句话介绍 |
+
+- `owner` 是**本站自己的卡片**，页面上有「复制友链代码」，方便别人取用
+- `friends` 是别人的岔路，数组顺序就是显示顺序
+- 换自己的友链头像：替换 `public/images/friend-link.jpg`，**文件名别改**，别人的友链就不会失效
+- 改完提交：
+
+```powershell
+git add content/friends.json
+git commit -m "更新友链"
+git push origin master
+```
+
+---
+
+## 四、命令速查
 
 | 命令 | 作用 |
 | --- | --- |
@@ -262,7 +305,7 @@ curl.exe -sI https://cdn.cloud-shelter.top/audio/xin-ge.mp3
 
 ---
 
-## 四、发布检查清单
+## 五、发布检查清单
 
 - [ ] `npm run lint:md` 通过
 - [ ] `npm run build` 通过
@@ -274,7 +317,7 @@ curl.exe -sI https://cdn.cloud-shelter.top/audio/xin-ge.mp3
 
 ---
 
-## 五、常见问题
+## 六、常见问题
 
 **文章没出现**
 
@@ -323,7 +366,7 @@ git push origin master
 
 ---
 
-## 六、不要做的事
+## 七、不要做的事
 
 1. **不要把音频提交进仓库**。`public/audio/` 已忽略；硬塞进去会让 `git clone` 变得极慢。
 2. **不要把 R2 密钥写进文件**。只放在当前 PowerShell 会话的环境变量里。
