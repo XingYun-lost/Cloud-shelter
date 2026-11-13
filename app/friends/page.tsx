@@ -83,7 +83,13 @@ export default function FriendsPage() {
                 >
                   <span className="flex h-11 w-11 shrink-0 items-center justify-center overflow-hidden rounded-full bg-sand/40 text-sm text-ink-mute">
                     {f.avatar ? (
-                      <img src={f.avatar} alt="" className="h-full w-full object-cover" />
+                      <img
+                        src={f.avatar}
+                        alt=""
+                        loading="lazy"
+                        referrerPolicy="no-referrer"
+                        className="h-full w-full object-cover"
+                      />
                     ) : (
                       f.name.slice(0, 1)
                     )}

@@ -5,5 +5,12 @@
     "avatar": "/images/friend-link.jpg",
     "desc": "单行道上，云在飘，你在走。"
   },
-  "friends": []
+  "friends": [
+    {
+      "name": "FireGuoの小窝",
+      "url": "https://fireguo.com",
+      "avatar": "https://fireguo.com/upload/IMG_20261007_091816.png",
+      "desc": "沧海桑田，人也是"
+    }
+  ]
 }
