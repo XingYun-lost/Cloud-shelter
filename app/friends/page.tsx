@@ -61,14 +61,14 @@ export default function FriendsPage() {
         </Reveal>
       )}
 
-      {/* 别人的岔路 */}
+      {/* 他人的迷途 */}
       <section className="mb-14">
-        <h2 className="font-mono text-[10px] uppercase tracking-[0.25em] text-ink-faint">别人的岔路</h2>
+        <h2 className="font-mono text-[10px] uppercase tracking-[0.25em] text-ink-faint">他人的迷途</h2>
 
         {friends.length === 0 ? (
           <Reveal className="mt-5">
             <p className="glass px-6 py-10 text-center text-sm font-light text-ink-faint">
-              还没有别人的岔路。
+              还没有他人的迷途。
             </p>
           </Reveal>
         ) : (

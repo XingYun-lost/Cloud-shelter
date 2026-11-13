@@ -280,7 +280,7 @@ curl.exe -sI https://cdn.cloud-shelter.top/audio/xin-ge.mp3
 | `desc` | 否 | 一句话介绍 |
 
 - `owner` 是**本站自己的卡片**，页面上有「复制友链代码」，方便别人取用
-- `friends` 是别人的岔路，数组顺序就是显示顺序
+- `friends` 是他人的迷途，数组顺序就是显示顺序
 - 换自己的友链头像：替换 `public/images/friend-link.jpg`，**文件名别改**，别人的友链就不会失效
 - 改完提交：
 
