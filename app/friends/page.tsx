@@ -101,19 +101,6 @@ export default function FriendsPage() {
         )}
       </section>
 
-      {/* 交换说明 */}
-      <Reveal className="mb-16">
-        <div className="rounded-2xl border border-white/60 bg-white/40 p-6">
-          <p className="font-serif text-sm font-normal text-ink">想交换友链？</p>
-          <p className="mt-2 text-sm font-light leading-relaxed text-ink-sub">
-            把你的站名、网址、头像地址和一句话发给我，我会把它放到这条岔路上。
-          </p>
-          <p className="mt-3 text-xs font-light leading-relaxed text-ink-faint">
-            只放自己能长久维护的站点；你会看见它出现在这里。
-          </p>
-        </div>
-      </Reveal>
-
       <Footer />
     </main>
   )
